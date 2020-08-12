@@ -1,2 +1,1 @@
-# checlayers
-Example of Toshiba CHEC Configuration Layers
+permalink: /index.html
