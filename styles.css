@@ -1,0 +1,107 @@
+body {
+  perspective: 1500px;
+  height: 100vh;
+  width: 100vw;
+}
+
+.container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform-style: preserve-3d;
+  backface-visibility: hidden;
+}
+
+.baseContainer {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform-style: preserve-3d;
+  backface-visibility: hidden;
+}
+
+.buspContainer {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform-style: preserve-3d;
+  backface-visibility: hidden;
+}
+
+.custContainer {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform-style: preserve-3d;
+  backface-visibility: hidden;
+}
+
+.storeContainer {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform-style: preserve-3d;
+  backface-visibility: hidden;
+}
+
+.face {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-size: cover;
+  border: black 1px solid;
+  font: 50px Arial;
+  color: #e61e1e;
+  text-align: center;
+  line-height: 100px;
+}
+
+.baseCover, .buspCover, .custCover, .storeCover {
+  width: 1024px;
+  height: 768px;
+  transform: translateX(-50%) translateY(-50%) translateZ(50px);
+}
+
+.baseCover {
+  background-image: url(images/base.png);
+}
+
+.buspCover {
+  background-image: url(images/busp.png);
+}
+
+.custCover {
+  background-image: url(images/cust.png);
+}
+
+.storeCover {
+  background-image: url(images/store.png);
+}
+
+.baseLeft, .buspLeft, .custLeft, .storeLeft {
+  width: 768px;
+  height: 100px;
+  background-color: #5f5f5f;
+  transform: translateX(-50%) translateY(-50%) rotateY(-90deg) rotateZ(90deg) translateZ(512px);
+}
+
+.baseRight, .buspRight, .custRight, .storeRight {
+  width: 768px;
+  height: 100px;
+  background-color: #5f5f5f;
+  transform: translateX(-50%) translateY(-50%) rotateY(90deg) rotateZ(-90deg) translateZ(512px);
+}
+
+.baseTop, .buspTop, .custTop, .storeTop {
+  width: 1024px;
+  height: 100px;
+  background-color: #5f5f5f;
+  transform: translateX(-50%) translateY(-50%) rotateY(180deg) rotateX(90deg) translateZ(384px);
+}
+
+.baseBottom, .buspBottom, .custBottom, .storeBottom {
+  width: 1024px;
+  height: 100px;
+  background-color: #5f5f5f;
+  transform: translateX(-50%) translateY(-50%) rotateX(-90deg) translateZ(384px);
+}
