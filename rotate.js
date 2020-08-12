@@ -1,5 +1,6 @@
-const container = document.querySelector(".container");
 const selectors = {
+  body: document.querySelector("body"),
+  container: document.querySelector(".container"),
   base: document.querySelector(".baseContainer"),
   busp: document.querySelector(".buspContainer"),
   cust: document.querySelector(".custContainer"),
@@ -9,7 +10,7 @@ const selectors = {
 };
 let isDown = false;
 
-container.addEventListener("mousemove", function(event) {
+selectors.body.addEventListener("mousemove", function(event) {
   if (isDown === true) {
     const midX = event.pageX - window.innerWidth / 2;
     const midY = event.pageY - window.innerHeight / 2;
@@ -20,16 +21,20 @@ container.addEventListener("mousemove", function(event) {
   }
 });
 
-container.addEventListener("mousedown", function() {
+selectors.container.addEventListener("mousedown", function() {
   isDown = true;
-})
+});
 
-container.addEventListener("mouseup", function() {
+selectors.body.addEventListener("mouseup", function() {
+  isDown = false;
+});
+
+selectors.body.addEventListener("mouseleave", function() {
   isDown = false;
 })
 
 function transform(midX, midY, distance){
-  container.style.transform = "rotateX(" + (midY * .5) + "deg) rotateY(" + (midX * .5) + "deg)"
+  selectors.container.style.transform = "rotateX(" + (midY * .5) + "deg) rotateY(" + (midX * .5) + "deg)"
   if (distance < 250) {
     selectors.base.style.transform = "translateZ(" + (distance * -3) + "px)"
     selectors.busp.style.transform = "translateZ(" + (distance * -1) + "px)"
