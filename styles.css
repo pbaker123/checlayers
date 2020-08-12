@@ -2,7 +2,7 @@ body {
   perspective: 1500px;
   height: 100vh;
   width: 100vw;
-  transform: scale(.4);
+  transform: scale(.4)
 }
 
 .container {
@@ -55,6 +55,11 @@ body {
   color: #e61e1e;
   text-align: center;
   line-height: 100px;
+  -moz-user-select: -moz-none;
+  -khtml-user-select: none;
+  -webkit-user-select: none;
+  -o-user-select: none;
+  user-select: none;
 }
 
 .baseCover, .buspCover, .custCover, .storeCover {
